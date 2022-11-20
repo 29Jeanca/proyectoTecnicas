@@ -65,5 +65,30 @@ namespace proyectoTecnicas
                 MessageBox.Show("ERROR");
             }
         }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void crearHospital_MouseHover(object sender, EventArgs e)
+        {
+            this.crearHospital.BackColor = Color.FromArgb(46, 80, 135);
+        }
+
+        private void crearHospital_MouseLeave(object sender, EventArgs e)
+        {
+            this.crearHospital.BackColor = Color.FromArgb(255, 255, 255); 
+        }
     }
 }
