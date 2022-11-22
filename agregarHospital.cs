@@ -20,5 +20,25 @@ namespace proyectoTecnicas
             }
             return 1;
         }
+        public static SqlDataReader traerInformacionDB(string columnas, string tabla, string filtrar, string dato)
+        {
+            if (filtrar == null && dato == null)
+            {
+                SqlConnection conexion = conexionBD.abrirConexion();
+                string query = "select " + columnas + " from " + tabla + ";";
+                SqlCommand comando = new SqlCommand(query, conexion);
+                SqlDataReader renderPacientes = comando.ExecuteReader();
+                return renderPacientes;
+            }
+            else
+            {
+                SqlConnection conexion = conexionBD.abrirConexion();
+                string query = "select " + columnas + " from " + tabla + "  where " + filtrar + " = '" + dato + "';";
+                SqlCommand comando = new SqlCommand(query, conexion);
+                SqlDataReader renderPacientes = comando.ExecuteReader();
+                return renderPacientes;
+            }
+
+        }
     }
 }

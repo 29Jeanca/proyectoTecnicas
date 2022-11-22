@@ -1,6 +1,6 @@
 ﻿namespace proyectoTecnicas
 {
-    partial class Form1
+    partial class ventanaHospital
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -57,64 +57,72 @@
             // 
             // txtValorFiscal
             // 
-            this.txtValorFiscal.Location = new System.Drawing.Point(12, 127);
+            this.txtValorFiscal.Location = new System.Drawing.Point(10, 111);
             this.txtValorFiscal.Name = "txtValorFiscal";
             this.txtValorFiscal.Size = new System.Drawing.Size(100, 20);
             this.txtValorFiscal.TabIndex = 0;
+            this.txtValorFiscal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValorFiscal_KeyPress);
             // 
             // txtAreaTerreno
             // 
-            this.txtAreaTerreno.Location = new System.Drawing.Point(12, 166);
+            this.txtAreaTerreno.Location = new System.Drawing.Point(12, 150);
             this.txtAreaTerreno.Name = "txtAreaTerreno";
             this.txtAreaTerreno.Size = new System.Drawing.Size(100, 20);
             this.txtAreaTerreno.TabIndex = 1;
+            this.txtAreaTerreno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAreaTerreno_KeyPress);
             // 
             // txtDirecExacta
             // 
-            this.txtDirecExacta.Location = new System.Drawing.Point(12, 214);
+            this.txtDirecExacta.Location = new System.Drawing.Point(12, 189);
+            this.txtDirecExacta.Multiline = true;
             this.txtDirecExacta.Name = "txtDirecExacta";
-            this.txtDirecExacta.Size = new System.Drawing.Size(100, 20);
+            this.txtDirecExacta.Size = new System.Drawing.Size(287, 45);
             this.txtDirecExacta.TabIndex = 2;
             // 
             // txtColor
             // 
-            this.txtColor.Location = new System.Drawing.Point(12, 412);
+            this.txtColor.Location = new System.Drawing.Point(15, 412);
             this.txtColor.Name = "txtColor";
             this.txtColor.Size = new System.Drawing.Size(100, 20);
             this.txtColor.TabIndex = 3;
+            this.txtColor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtColor_KeyPress);
             // 
             // txtImagen
             // 
-            this.txtImagen.Location = new System.Drawing.Point(516, 111);
+            this.txtImagen.Location = new System.Drawing.Point(513, 99);
+            this.txtImagen.Multiline = true;
             this.txtImagen.Name = "txtImagen";
-            this.txtImagen.Size = new System.Drawing.Size(100, 20);
+            this.txtImagen.Size = new System.Drawing.Size(105, 141);
             this.txtImagen.TabIndex = 4;
             // 
             // txtTiposdCirugia
             // 
             this.txtTiposdCirugia.Location = new System.Drawing.Point(12, 505);
+            this.txtTiposdCirugia.Multiline = true;
             this.txtTiposdCirugia.Name = "txtTiposdCirugia";
-            this.txtTiposdCirugia.Size = new System.Drawing.Size(100, 20);
+            this.txtTiposdCirugia.Size = new System.Drawing.Size(287, 37);
             this.txtTiposdCirugia.TabIndex = 5;
+            this.txtTiposdCirugia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTiposdCirugia_KeyPress);
             // 
             // txtCantConsultorios
             // 
-            this.txtCantConsultorios.Location = new System.Drawing.Point(12, 462);
+            this.txtCantConsultorios.Location = new System.Drawing.Point(15, 463);
             this.txtCantConsultorios.Name = "txtCantConsultorios";
             this.txtCantConsultorios.Size = new System.Drawing.Size(100, 20);
             this.txtCantConsultorios.TabIndex = 6;
+            this.txtCantConsultorios.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantConsultorios_KeyPress);
             // 
             // txtCantNiveles
             // 
-            this.txtCantNiveles.Location = new System.Drawing.Point(12, 373);
+            this.txtCantNiveles.Location = new System.Drawing.Point(15, 373);
             this.txtCantNiveles.Name = "txtCantNiveles";
             this.txtCantNiveles.Size = new System.Drawing.Size(100, 20);
             this.txtCantNiveles.TabIndex = 7;
-            this.txtCantNiveles.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
+            this.txtCantNiveles.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantNiveles_KeyPress);
             // 
             // txtFecha
             // 
-            this.txtFecha.Location = new System.Drawing.Point(12, 544);
+            this.txtFecha.Location = new System.Drawing.Point(10, 561);
             this.txtFecha.Name = "txtFecha";
             this.txtFecha.Size = new System.Drawing.Size(100, 20);
             this.txtFecha.TabIndex = 8;
@@ -122,6 +130,7 @@
             // 
             // comboPronvincia
             // 
+            this.comboPronvincia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboPronvincia.FormattingEnabled = true;
             this.comboPronvincia.Items.AddRange(new object[] {
             "Alajuela",
@@ -131,17 +140,17 @@
             "Limón",
             "Puntarenas",
             "San Jose"});
-            this.comboPronvincia.Location = new System.Drawing.Point(12, 253);
+            this.comboPronvincia.Location = new System.Drawing.Point(15, 253);
             this.comboPronvincia.Name = "comboPronvincia";
             this.comboPronvincia.Size = new System.Drawing.Size(100, 21);
             this.comboPronvincia.TabIndex = 9;
             // 
             // comboCanton
             // 
+            this.comboCanton.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboCanton.FormattingEnabled = true;
             this.comboCanton.Items.AddRange(new object[] {
             "Central",
-            "",
             "Liberia",
             "Escazú",
             "San Ramón",
@@ -217,9 +226,8 @@
             "Dota",
             "Currridabat",
             "Pérez Zeledón",
-            "León Cortés",
-            ""});
-            this.comboCanton.Location = new System.Drawing.Point(12, 293);
+            "León Cortés"});
+            this.comboCanton.Location = new System.Drawing.Point(15, 293);
             this.comboCanton.Name = "comboCanton";
             this.comboCanton.Size = new System.Drawing.Size(100, 21);
             this.comboCanton.TabIndex = 10;
@@ -227,25 +235,26 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 111);
+            this.label1.Location = new System.Drawing.Point(30, 93);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 13);
             this.label1.TabIndex = 11;
             this.label1.Text = "Valor Fiscal";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 150);
+            this.label2.Location = new System.Drawing.Point(12, 134);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 13);
+            this.label2.Size = new System.Drawing.Size(98, 13);
             this.label2.TabIndex = 12;
-            this.label2.Text = "Area Terreno";
+            this.label2.Text = "Area Terreno en m²";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 198);
+            this.label3.Location = new System.Drawing.Point(18, 173);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 13);
             this.label3.TabIndex = 13;
@@ -282,6 +291,7 @@
             // 
             // comboDistrito
             // 
+            this.comboDistrito.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboDistrito.FormattingEnabled = true;
             this.comboDistrito.Items.AddRange(new object[] {
             "Uruca",
@@ -555,7 +565,6 @@
             "Bahía Ballena\t",
             "Piedras Blancas\t",
             "Bahía Drake\t\t\t\t\t",
-            "",
             "Quepos\t",
             "Savegre\t",
             "Naranjito",
@@ -606,7 +615,7 @@
             "Pocora\t",
             "Río Jiménez",
             "Duacarí\t"});
-            this.comboDistrito.Location = new System.Drawing.Point(12, 333);
+            this.comboDistrito.Location = new System.Drawing.Point(15, 333);
             this.comboDistrito.Name = "comboDistrito";
             this.comboDistrito.Size = new System.Drawing.Size(100, 21);
             this.comboDistrito.TabIndex = 16;
@@ -652,7 +661,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(550, 93);
+            this.label11.Location = new System.Drawing.Point(545, 83);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(42, 13);
             this.label11.TabIndex = 21;
@@ -661,7 +670,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(9, 528);
+            this.label12.Location = new System.Drawing.Point(9, 545);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(105, 13);
             this.label12.TabIndex = 22;
@@ -669,7 +678,7 @@
             // 
             // crearHospital
             // 
-            this.crearHospital.Location = new System.Drawing.Point(130, 561);
+            this.crearHospital.Location = new System.Drawing.Point(346, 545);
             this.crearHospital.Name = "crearHospital";
             this.crearHospital.Size = new System.Drawing.Size(76, 36);
             this.crearHospital.TabIndex = 23;
@@ -679,11 +688,10 @@
             this.crearHospital.MouseLeave += new System.EventHandler(this.crearHospital_MouseLeave);
             this.crearHospital.MouseHover += new System.EventHandler(this.crearHospital_MouseHover);
             // 
-            // Form1
+            // ventanaHospital
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::proyectoTecnicas.Properties.Resources.Registra_Tu_hospital__1_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(641, 609);
             this.Controls.Add(this.crearHospital);
@@ -714,7 +722,7 @@
             this.DoubleBuffered = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form1";
+            this.Name = "ventanaHospital";
             this.Text = "Registro de Hospitales";
             this.ResumeLayout(false);
             this.PerformLayout();

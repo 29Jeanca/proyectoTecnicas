@@ -59,25 +59,5 @@ namespace proyectoTecnicas.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap IMG_20221101_094703 {
-            get {
-                object obj = ResourceManager.GetObject("IMG_20221101_094703", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Registra_Tu_hospital__1_ {
-            get {
-                object obj = ResourceManager.GetObject("Registra Tu hospital (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }
